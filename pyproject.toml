@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fast-sentiment"
+version = "0.1.0"
+description = "lightweight sentiment analysis api"
+authors = ["IvoDz <ivo.dz2003@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2.1.2"
+transformers = "^4.37.2"
+fastapi = "^0.109.0"
+scipy = "^1.12.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0.post1"}
+
+[tool.poetry.group.dev.dependencies]
+uvicorn = "^0.27.0.post1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
