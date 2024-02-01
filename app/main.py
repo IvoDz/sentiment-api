@@ -1,11 +1,7 @@
-from typing import Union
-
 from fastapi import FastAPI
-
-from app.sentiment import get_sentiment
+from app.model import get_sentiment
 
 app = FastAPI()
-
 
 @app.get("/")
 def read_root():
@@ -14,4 +10,3 @@ def read_root():
 @app.get("/sentiment/{text}")
 def sentiment(text: str):
     return get_sentiment(text)
-
